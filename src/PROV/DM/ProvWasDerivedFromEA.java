@@ -19,49 +19,49 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table(name = "WasAssociatedWithAE")
-public class WasAssociatedWithAE implements Serializable {
+@Table(name = "WasDerivedFromEA")
+public class ProvWasDerivedFromEA implements Serializable {
 
     @Id
     @GeneratedValue
     @Column
-    private Integer idWasAssociatedWithAE;
+    private Integer idWasDerivedFromEA;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
 
-    public WasAssociatedWithAE() {
+    public ProvWasDerivedFromEA() {
     }
 
-    public WasAssociatedWithAE(Integer idWasAssociatedWithAE) {
-        this.idWasAssociatedWithAE = idWasAssociatedWithAE;
+    public ProvWasDerivedFromEA(Integer idWasDerivedFromEA) {
+        this.idWasDerivedFromEA = idWasDerivedFromEA;
     }
 
-    public Integer getIdWasAssociatedWithAE() {
-        return idWasAssociatedWithAE;
+    public Integer getIdWasDerivedFromEA() {
+        return idWasDerivedFromEA;
     }
 
-    public void setIdWasAssociatedWithAE(Integer idWasAssociatedWithAE) {
-        this.idWasAssociatedWithAE = idWasAssociatedWithAE;
+    public void setIdWasDerivedFromEA(Integer idWasDerivedFromEA) {
+        this.idWasDerivedFromEA = idWasDerivedFromEA;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
-    
+
 }

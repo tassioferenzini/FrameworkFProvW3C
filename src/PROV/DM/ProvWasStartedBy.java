@@ -22,8 +22,8 @@ import javax.persistence.TemporalType;
  * @author tassio
  */
 @Entity
-@Table(name = "WasStartedByAA")
-public class WasStartedByAA implements Serializable {
+@Table(name = "WasStartedBy")
+public class ProvWasStartedBy implements Serializable {
 
     @Id
     @GeneratedValue
@@ -34,18 +34,18 @@ public class WasStartedByAA implements Serializable {
     private Date time;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private Activity activity1;
+    private PROV.DM.ProvEntity entity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity1;
 
-    public WasStartedByAA() {
+    public ProvWasStartedBy() {
     }
 
-    public WasStartedByAA(Integer idWasStartedBy) {
+    public ProvWasStartedBy(Integer idWasStartedBy) {
         this.idWasStartedBy = idWasStartedBy;
     }
 
@@ -65,28 +65,28 @@ public class WasStartedByAA implements Serializable {
         this.time = time;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public Activity getActivity1() {
-        return activity1;
-    }
-
-    public void setActivity1(Activity activity1) {
-        this.activity1 = activity1;
-    }
-
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 
+    public PROV.DM.ProvEntity getEntity1() {
+        return entity1;
+    }
+
+    public void setEntity1(PROV.DM.ProvEntity entity1) {
+        this.entity1 = entity1;
+    }
+    
 }

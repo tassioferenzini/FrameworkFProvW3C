@@ -19,48 +19,48 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table(name = "SpecializationOf")
-public class SpecializationOf implements Serializable {
+@Table (name = "AlternateOf")
+public class ProvAlternateOf implements Serializable {
 
     @Id
     @GeneratedValue
     @Column
-    private Integer idSpecializationOf;
+    private Integer idAlterneteOf;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity1;
+    private PROV.DM.ProvEntity entity1;
 
-    public SpecializationOf() {
+    public ProvAlternateOf() {
     }
 
-    public SpecializationOf(Integer idSpecializationOf) {
-        this.idSpecializationOf = idSpecializationOf;
+    public ProvAlternateOf(Integer idAlterneteOf) {
+        this.idAlterneteOf = idAlterneteOf;
     }
 
-    public Integer getIdSpecializationOf() {
-        return idSpecializationOf;
+    public Integer getIdAlterneteOf() {
+        return idAlterneteOf;
     }
 
-    public void setIdSpecializationOf(Integer idSpecializationOf) {
-        this.idSpecializationOf = idSpecializationOf;
+    public void setIdAlterneteOf(Integer idAlterneteOf) {
+        this.idAlterneteOf = idAlterneteOf;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 
-    public PROV.DM.Entity getEntity1() {
+    public PROV.DM.ProvEntity getEntity1() {
         return entity1;
     }
 
-    public void setEntity1(PROV.DM.Entity entity1) {
+    public void setEntity1(PROV.DM.ProvEntity entity1) {
         this.entity1 = entity1;
     }
 

@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WasAssociatedWith")
-public class WasAssociatedWith implements Serializable {
+public class ProvWasAssociatedWith implements Serializable {
 
     @Id
     @GeneratedValue
@@ -30,15 +30,15 @@ public class WasAssociatedWith implements Serializable {
     private String plan;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private Agent agent;
+    private ProvAgent agent;
 
-    public WasAssociatedWith() {
+    public ProvWasAssociatedWith() {
     }
 
-    public WasAssociatedWith(Integer idWasAssociatedWith) {
+    public ProvWasAssociatedWith(Integer idWasAssociatedWith) {
         this.idWasAssociatedWith = idWasAssociatedWith;
     }
 
@@ -58,19 +58,19 @@ public class WasAssociatedWith implements Serializable {
         this.plan = plan;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public Agent getAgent() {
+    public ProvAgent getAgent() {
         return agent;
     }
 
-    public void setAgent(Agent agent) {
+    public void setAgent(ProvAgent agent) {
         this.agent = agent;
     }
 

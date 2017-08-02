@@ -18,7 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Agent")
-public class Agent implements Serializable {
+public class ProvAgent implements Serializable {
 
     @Id
     @GeneratedValue
@@ -27,10 +27,10 @@ public class Agent implements Serializable {
     @Column
     private String typeAgent;
 
-    public Agent() {
+    public ProvAgent() {
     }
 
-    public Agent(Integer idAgent) {
+    public ProvAgent(Integer idAgent) {
         this.idAgent = idAgent;
     }
 

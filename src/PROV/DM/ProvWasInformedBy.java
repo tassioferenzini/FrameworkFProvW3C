@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WasInformedBy")
-public class WasInformedBy implements Serializable {
+public class ProvWasInformedBy implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -29,15 +29,15 @@ public class WasInformedBy implements Serializable {
     private Integer idWasInformedBy;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private Activity activity1;
+    private ProvActivity activity1;
 
-    public WasInformedBy() {
+    public ProvWasInformedBy() {
     }
 
-    public WasInformedBy(Integer idWasInformedBy) {
+    public ProvWasInformedBy(Integer idWasInformedBy) {
         this.idWasInformedBy = idWasInformedBy;
     }
 
@@ -49,19 +49,19 @@ public class WasInformedBy implements Serializable {
         this.idWasInformedBy = idWasInformedBy;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public Activity getActivity1() {
+    public ProvActivity getActivity1() {
         return activity1;
     }
 
-    public void setActivity1(Activity activity1) {
+    public void setActivity1(ProvActivity activity1) {
         this.activity1 = activity1;
     }
     

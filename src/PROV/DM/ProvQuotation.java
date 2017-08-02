@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Quotation")
-public class Quotation implements Serializable {
+public class ProvQuotation implements Serializable {
 
     @Id
     @GeneratedValue
@@ -28,15 +28,15 @@ public class Quotation implements Serializable {
     private Integer idQuotation;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity1;
+    private PROV.DM.ProvEntity entity1;
 
-    public Quotation() {
+    public ProvQuotation() {
     }
 
-    public Quotation(Integer idQuotation) {
+    public ProvQuotation(Integer idQuotation) {
         this.idQuotation = idQuotation;
     }
 
@@ -48,19 +48,19 @@ public class Quotation implements Serializable {
         this.idQuotation = idQuotation;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 
-    public PROV.DM.Entity getEntity1() {
+    public PROV.DM.ProvEntity getEntity1() {
         return entity1;
     }
 
-    public void setEntity1(PROV.DM.Entity entity1) {
+    public void setEntity1(PROV.DM.ProvEntity entity1) {
         this.entity1 = entity1;
     }
     

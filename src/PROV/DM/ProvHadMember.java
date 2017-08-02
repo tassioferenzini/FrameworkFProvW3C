@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "HadMember")
-public class HadMember implements Serializable {
+public class ProvHadMember implements Serializable {
 
     @Id
     @GeneratedValue
@@ -30,12 +30,12 @@ public class HadMember implements Serializable {
     private String collection;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
 
-    public HadMember() {
+    public ProvHadMember() {
     }
 
-    public HadMember(Integer idHadMember) {
+    public ProvHadMember(Integer idHadMember) {
         this.idHadMember = idHadMember;
     }
 
@@ -55,11 +55,11 @@ public class HadMember implements Serializable {
         this.collection = collection;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 

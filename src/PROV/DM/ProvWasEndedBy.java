@@ -22,39 +22,40 @@ import javax.persistence.TemporalType;
  * @author tassio
  */
 @Entity
-@Table(name = "WasStartedBy")
-public class WasStartedBy implements Serializable {
+@Table(name = "WasEndedBy")
+public class ProvWasEndedBy implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
     @Column
-    private Integer idWasStartedBy;
+    private Integer idWasEndedBy;
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date time;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity1;
+    private PROV.DM.ProvEntity entity1;
 
-    public WasStartedBy() {
+    public ProvWasEndedBy() {
     }
 
-    public WasStartedBy(Integer idWasStartedBy) {
-        this.idWasStartedBy = idWasStartedBy;
+    public ProvWasEndedBy(Integer idWasEndedBy) {
+        this.idWasEndedBy = idWasEndedBy;
     }
 
-    public Integer getIdWasStartedBy() {
-        return idWasStartedBy;
+    public Integer getIdWasEndedBy() {
+        return idWasEndedBy;
     }
 
-    public void setIdWasStartedBy(Integer idWasStartedBy) {
-        this.idWasStartedBy = idWasStartedBy;
+    public void setIdWasEndedBy(Integer idWasEndedBy) {
+        this.idWasEndedBy = idWasEndedBy;
     }
 
     public Date getTime() {
@@ -65,28 +66,28 @@ public class WasStartedBy implements Serializable {
         this.time = time;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 
-    public PROV.DM.Entity getEntity1() {
+    public PROV.DM.ProvEntity getEntity1() {
         return entity1;
     }
 
-    public void setEntity1(PROV.DM.Entity entity1) {
+    public void setEntity1(PROV.DM.ProvEntity entity1) {
         this.entity1 = entity1;
     }
-    
+
 }

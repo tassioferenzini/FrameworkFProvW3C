@@ -23,7 +23,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "WasGeneratedBy")
-public class WasGeneratedBy implements Serializable {
+public class ProvWasGeneratedBy implements Serializable {
 
     @Id
     @GeneratedValue
@@ -34,15 +34,15 @@ public class WasGeneratedBy implements Serializable {
     private Date timeWasGeneratedBy;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
 
-    public WasGeneratedBy() {
+    public ProvWasGeneratedBy() {
     }
 
-    public WasGeneratedBy(Integer idWasGeneratedBy) {
+    public ProvWasGeneratedBy(Integer idWasGeneratedBy) {
         this.idWasGeneratedBy = idWasGeneratedBy;
     }
 
@@ -62,19 +62,19 @@ public class WasGeneratedBy implements Serializable {
         this.timeWasGeneratedBy = timeWasGeneratedBy;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 

@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ActedOnBehalfOf")
-public class ActedOnBehalfOf implements Serializable {
+public class ProvActedOnBehalfOf implements Serializable {
 
     @Id
     @GeneratedValue
@@ -28,18 +28,18 @@ public class ActedOnBehalfOf implements Serializable {
     private Integer idActedOnBehalfOf;
     @JoinColumn
     @OneToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @OneToOne
-    private Agent agent;
+    private ProvAgent agent;
     @JoinColumn
     @OneToOne
-    private Agent agent1;
+    private ProvAgent agent1;
 
-    public ActedOnBehalfOf() {
+    public ProvActedOnBehalfOf() {
     }
 
-    public ActedOnBehalfOf(Integer idActedOnBehalfOf) {
+    public ProvActedOnBehalfOf(Integer idActedOnBehalfOf) {
         this.idActedOnBehalfOf = idActedOnBehalfOf;
     }
 
@@ -51,27 +51,27 @@ public class ActedOnBehalfOf implements Serializable {
         this.idActedOnBehalfOf = idActedOnBehalfOf;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public Agent getAgent() {
+    public ProvAgent getAgent() {
         return agent;
     }
 
-    public void setAgent(Agent agent) {
+    public void setAgent(ProvAgent agent) {
         this.agent = agent;
     }
 
-    public Agent getAgent1() {
+    public ProvAgent getAgent1() {
         return agent1;
     }
 
-    public void setAgent1(Agent agent1) {
+    public void setAgent1(ProvAgent agent1) {
         this.agent1 = agent1;
     }
 

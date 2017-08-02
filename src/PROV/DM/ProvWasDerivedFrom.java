@@ -18,7 +18,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Table(name = "WasDerivedFrom")
-public class WasDerivedFrom implements Serializable {
+public class ProvWasDerivedFrom implements Serializable {
 
     @Id
     @GeneratedValue
@@ -30,18 +30,18 @@ public class WasDerivedFrom implements Serializable {
     private String usage;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity generatedEntity;
+    private PROV.DM.ProvEntity generatedEntity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity usedEntity;
+    private PROV.DM.ProvEntity usedEntity;
 
-    public WasDerivedFrom() {
+    public ProvWasDerivedFrom() {
     }
 
-    public WasDerivedFrom(Integer idwasDerivedFrom) {
+    public ProvWasDerivedFrom(Integer idwasDerivedFrom) {
         this.idwasDerivedFrom = idwasDerivedFrom;
     }
 
@@ -69,27 +69,27 @@ public class WasDerivedFrom implements Serializable {
         this.usage = usage;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public Entity getGeneratedEntity() {
+    public ProvEntity getGeneratedEntity() {
         return generatedEntity;
     }
 
-    public void setGeneratedEntity(Entity generatedEntity) {
+    public void setGeneratedEntity(ProvEntity generatedEntity) {
         this.generatedEntity = generatedEntity;
     }
 
-    public Entity getUsedEntity() {
+    public ProvEntity getUsedEntity() {
         return usedEntity;
     }
 
-    public void setUsedEntity(Entity usedEntity) {
+    public void setUsedEntity(ProvEntity usedEntity) {
         this.usedEntity = usedEntity;
     }
 

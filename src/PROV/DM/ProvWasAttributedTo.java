@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WasAttributedTo")
-public class WasAttributedTo implements Serializable {
+public class ProvWasAttributedTo implements Serializable {
 
     @Id
     @GeneratedValue
@@ -28,15 +28,15 @@ public class WasAttributedTo implements Serializable {
     private Integer idWasAttributedTo;
     @JoinColumn
     @ManyToOne
-    private Agent agent;
+    private ProvAgent agent;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
 
-    public WasAttributedTo() {
+    public ProvWasAttributedTo() {
     }
 
-    public WasAttributedTo(Integer idWasAttributedTo) {
+    public ProvWasAttributedTo(Integer idWasAttributedTo) {
         this.idWasAttributedTo = idWasAttributedTo;
     }
 
@@ -48,19 +48,19 @@ public class WasAttributedTo implements Serializable {
         this.idWasAttributedTo = idWasAttributedTo;
     }
 
-    public Agent getAgent() {
+    public ProvAgent getAgent() {
         return agent;
     }
 
-    public void setAgent(Agent agent) {
+    public void setAgent(ProvAgent agent) {
         this.agent = agent;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
     

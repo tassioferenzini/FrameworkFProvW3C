@@ -22,36 +22,39 @@ import javax.persistence.TemporalType;
  * @author tassio
  */
 @Entity
-@Table(name = "WasInvalidatedBy")
-public class WasInvalidatedBy implements Serializable {
+@Table(name = "WasEndedByAA")
+public class ProvWasEndedByAA implements Serializable {
 
     @Id
     @GeneratedValue
     @Column
-    private Integer idWasInvalidatedBy;
+    private Integer idWasEndedBy;
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date time;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private ProvActivity activity1;
+    @JoinColumn
+    @ManyToOne
+    private PROV.DM.ProvEntity entity;
 
-    public WasInvalidatedBy() {
+    public ProvWasEndedByAA() {
     }
 
-    public WasInvalidatedBy(Integer idWasInvalidatedBy) {
-        this.idWasInvalidatedBy = idWasInvalidatedBy;
+    public ProvWasEndedByAA(Integer idWasEndedBy) {
+        this.idWasEndedBy = idWasEndedBy;
     }
 
-    public Integer getIdWasInvalidatedBy() {
-        return idWasInvalidatedBy;
+    public Integer getIdWasEndedBy() {
+        return idWasEndedBy;
     }
 
-    public void setIdWasInvalidatedBy(Integer idWasInvalidatedBy) {
-        this.idWasInvalidatedBy = idWasInvalidatedBy;
+    public void setIdWasEndedBy(Integer idWasEndedBy) {
+        this.idWasEndedBy = idWasEndedBy;
     }
 
     public Date getTime() {
@@ -62,20 +65,28 @@ public class WasInvalidatedBy implements Serializable {
         this.time = time;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public ProvActivity getActivity1() {
+        return activity1;
+    }
+
+    public void setActivity1(ProvActivity activity1) {
+        this.activity1 = activity1;
+    }
+
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
-    
+
 }

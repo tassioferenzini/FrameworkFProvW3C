@@ -23,7 +23,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "Used")
-public class Used implements Serializable {
+public class ProvUsed implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -35,15 +35,15 @@ public class Used implements Serializable {
     private Date timeUsed;
     @JoinColumn
     @ManyToOne
-    private Activity activity;
+    private ProvActivity activity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
 
-    public Used() {
+    public ProvUsed() {
     }
 
-    public Used(Integer idUsed) {
+    public ProvUsed(Integer idUsed) {
         this.idUsed = idUsed;
     }
 
@@ -63,19 +63,19 @@ public class Used implements Serializable {
         this.timeUsed = timeUsed;
     }
 
-    public Activity getActivity() {
+    public ProvActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(ProvActivity activity) {
         this.activity = activity;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 

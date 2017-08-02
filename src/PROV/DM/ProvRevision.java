@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Revision")
-public class Revision implements Serializable {
+public class ProvRevision implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -31,15 +31,15 @@ public class Revision implements Serializable {
     private String type;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity;
+    private PROV.DM.ProvEntity entity;
     @JoinColumn
     @ManyToOne
-    private PROV.DM.Entity entity1;
+    private PROV.DM.ProvEntity entity1;
 
-    public Revision() {
+    public ProvRevision() {
     }
 
-    public Revision(Integer idRevision) {
+    public ProvRevision(Integer idRevision) {
         this.idRevision = idRevision;
     }
 
@@ -59,19 +59,19 @@ public class Revision implements Serializable {
         this.type = type;
     }
 
-    public PROV.DM.Entity getEntity() {
+    public PROV.DM.ProvEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(PROV.DM.Entity entity) {
+    public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
     }
 
-    public PROV.DM.Entity getEntity1() {
+    public PROV.DM.ProvEntity getEntity1() {
         return entity1;
     }
 
-    public void setEntity1(PROV.DM.Entity entity1) {
+    public void setEntity1(PROV.DM.ProvEntity entity1) {
         this.entity1 = entity1;
     }
 

@@ -21,7 +21,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "Activity")
-public class Activity implements Serializable {
+public class ProvActivity implements Serializable {
 
     @Id
     @GeneratedValue
@@ -34,10 +34,10 @@ public class Activity implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date endTime;
   
-    public Activity() {
+    public ProvActivity() {
     }
 
-    public Activity(Integer idActivity) {
+    public ProvActivity(Integer idActivity) {
         this.idActivity = idActivity;
     }
 
