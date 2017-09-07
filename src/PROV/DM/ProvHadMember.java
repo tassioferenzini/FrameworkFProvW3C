@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table(name = "HadMember")
+@Table(name = "ProvHadMember")
 public class ProvHadMember implements Serializable {
 
     @Id

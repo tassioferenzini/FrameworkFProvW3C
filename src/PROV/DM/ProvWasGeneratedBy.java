@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
  * @author tassio
  */
 @Entity
-@Table(name = "WasGeneratedBy")
+@Table(name = "ProvWasGeneratedBy")
 public class ProvWasGeneratedBy implements Serializable {
 
     @Id

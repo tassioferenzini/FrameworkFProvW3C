@@ -17,7 +17,7 @@ import javax.persistence.Table;
  *
  * @author tassio
  */
-@Table(name = "WasDerivedFrom")
+@Table(name = "ProvWasDerivedFrom")
 public class ProvWasDerivedFrom implements Serializable {
 
     @Id

@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table(name = "Agent")
+@Table(name = "ProvAgent")
 public class ProvAgent implements Serializable {
 
     @Id

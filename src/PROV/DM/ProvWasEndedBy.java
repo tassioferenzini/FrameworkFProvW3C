@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
  * @author tassio
  */
 @Entity
-@Table(name = "WasEndedBy")
+@Table(name = "ProvWasEndedBy")
 public class ProvWasEndedBy implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table(name = "WasAssociatedWithAE")
+@Table(name = "ProvWasAssociatedWithAE")
 public class ProvWasAssociatedWithAE implements Serializable {
 
     @Id

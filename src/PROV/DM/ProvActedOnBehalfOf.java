@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table(name = "ActedOnBehalfOf")
+@Table(name = "ProvActedOnBehalfOf")
 public class ProvActedOnBehalfOf implements Serializable {
 
     @Id

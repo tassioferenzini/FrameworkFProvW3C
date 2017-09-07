@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table(name = "PrimarySource")
+@Table(name = "ProvPrimarySource")
 public class ProvPrimarySource implements Serializable {
 
     @Id

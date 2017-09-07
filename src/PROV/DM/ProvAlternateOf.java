@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Entity
-@Table (name = "AlternateOf")
+@Table (name = "ProvAlternateOf")
 public class ProvAlternateOf implements Serializable {
 
     @Id
