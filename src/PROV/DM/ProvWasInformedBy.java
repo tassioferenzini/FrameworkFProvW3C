@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PROV.DM;
 
 import java.io.Serializable;
@@ -64,5 +59,5 @@ public class ProvWasInformedBy implements Serializable {
     public void setActivity1(ProvActivity activity1) {
         this.activity1 = activity1;
     }
-    
+
 }

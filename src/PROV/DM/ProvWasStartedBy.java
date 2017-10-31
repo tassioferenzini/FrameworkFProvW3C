@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PROV.DM;
 
 import java.io.Serializable;
@@ -88,5 +83,5 @@ public class ProvWasStartedBy implements Serializable {
     public void setEntity1(PROV.DM.ProvEntity entity1) {
         this.entity1 = entity1;
     }
-    
+
 }
