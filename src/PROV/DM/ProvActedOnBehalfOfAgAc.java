@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvActedOnBehalfOfAgAc")
-public class ProvActedOnBehalfOfAgAc implements Serializable {
+public abstract class ProvActedOnBehalfOfAgAc implements Serializable {
 
     @Id
     @GeneratedValue

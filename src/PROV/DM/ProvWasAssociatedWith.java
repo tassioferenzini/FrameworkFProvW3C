@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvWasAssociatedWith")
-public class ProvWasAssociatedWith implements Serializable {
+public abstract class ProvWasAssociatedWith implements Serializable {
 
     @Id
     @GeneratedValue

@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Table(name = "ProvWasDerivedFrom")
-public class ProvWasDerivedFrom implements Serializable {
+public abstract class ProvWasDerivedFrom implements Serializable {
 
     @Id
     @GeneratedValue

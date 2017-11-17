@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "ProvWasGeneratedBy")
-public class ProvWasGeneratedBy implements Serializable {
+public abstract class ProvWasGeneratedBy implements Serializable {
 
     @Id
     @GeneratedValue

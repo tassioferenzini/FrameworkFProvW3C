@@ -12,7 +12,7 @@ import javax.persistence.Table;
  */
 @javax.persistence.Entity
 @Table(name = "ProvEntity")
-public class ProvEntity implements Serializable {
+public abstract class ProvEntity implements Serializable {
 
     @Id
     @GeneratedValue

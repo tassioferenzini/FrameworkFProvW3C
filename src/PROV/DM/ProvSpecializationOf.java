@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvSpecializationOf")
-public class ProvSpecializationOf implements Serializable {
+public abstract class ProvSpecializationOf implements Serializable {
 
     @Id
     @GeneratedValue

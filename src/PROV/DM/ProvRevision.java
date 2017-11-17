@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvRevision")
-public class ProvRevision implements Serializable {
+public abstract class ProvRevision implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id

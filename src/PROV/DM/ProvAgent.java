@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvAgent")
-public class ProvAgent implements Serializable {
+public abstract class ProvAgent implements Serializable {
 
     @Id
     @GeneratedValue
