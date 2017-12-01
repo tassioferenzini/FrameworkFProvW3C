@@ -12,12 +12,14 @@ import javax.persistence.Table;
  */
 @javax.persistence.Entity
 @Table(name = "ProvEntity")
-public abstract class ProvEntity implements Serializable {
+public class ProvEntity implements Serializable {
 
     @Id
     @GeneratedValue
     @Column
     private Integer idEntity;
+    @Column
+    private String nameEntity;
 
     public Integer getIdEntity() {
         return idEntity;
@@ -25,6 +27,19 @@ public abstract class ProvEntity implements Serializable {
 
     public void setIdEntity(Integer idEntity) {
         this.idEntity = idEntity;
+    }
+
+    public String getNameEntity() {
+        return nameEntity;
+    }
+
+    public void setNameEntity(String nameEntity) {
+        this.nameEntity = nameEntity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvEntity{" + "idEntity=" + idEntity + ", nameEntity=" + nameEntity + '}';
     }
 
 }

@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "ProvWasEndedByAA")
-public abstract class ProvWasEndedByAA implements Serializable {
+public class ProvWasEndedByAA implements Serializable {
 
     @Id
     @GeneratedValue
@@ -82,6 +82,11 @@ public abstract class ProvWasEndedByAA implements Serializable {
 
     public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvWasEndedByAA{" + "idWasEndedBy=" + idWasEndedBy + ", time=" + time + ", activity=" + activity + ", activity1=" + activity1 + ", entity=" + entity + '}';
     }
 
 }

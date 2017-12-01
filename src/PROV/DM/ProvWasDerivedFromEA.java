@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvWasDerivedFromEA")
-public abstract class ProvWasDerivedFromEA implements Serializable {
+public class ProvWasDerivedFromEA implements Serializable {
 
     @Id
     @GeneratedValue
@@ -57,6 +57,11 @@ public abstract class ProvWasDerivedFromEA implements Serializable {
 
     public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvWasDerivedFromEA{" + "idWasDerivedFromEA=" + idWasDerivedFromEA + ", activity=" + activity + ", entity=" + entity + '}';
     }
 
 }

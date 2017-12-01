@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "ProvUsed")
-public abstract class ProvUsed implements Serializable {
+public class ProvUsed implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -72,6 +72,11 @@ public abstract class ProvUsed implements Serializable {
 
     public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvUsed{" + "idUsed=" + idUsed + ", timeUsed=" + timeUsed + ", activity=" + activity + ", entity=" + entity + '}';
     }
 
 }

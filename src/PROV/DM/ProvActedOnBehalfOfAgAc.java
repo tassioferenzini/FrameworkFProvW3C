@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvActedOnBehalfOfAgAc")
-public abstract class ProvActedOnBehalfOfAgAc implements Serializable {
+public class ProvActedOnBehalfOfAgAc implements Serializable {
 
     @Id
     @GeneratedValue
@@ -57,6 +57,11 @@ public abstract class ProvActedOnBehalfOfAgAc implements Serializable {
 
     public void setAgent(ProvAgent agent) {
         this.agent = agent;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvActedOnBehalfOfAgAc{" + "idActedOnBehalfOfAgAc=" + idActedOnBehalfOfAgAc + ", activity=" + activity + ", agent=" + agent + '}';
     }
 
 }

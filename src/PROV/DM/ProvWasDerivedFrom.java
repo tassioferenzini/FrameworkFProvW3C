@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * @author tassio
  */
 @Table(name = "ProvWasDerivedFrom")
-public abstract class ProvWasDerivedFrom implements Serializable {
+public class ProvWasDerivedFrom implements Serializable {
 
     @Id
     @GeneratedValue
@@ -86,6 +86,11 @@ public abstract class ProvWasDerivedFrom implements Serializable {
 
     public void setUsedEntity(ProvEntity usedEntity) {
         this.usedEntity = usedEntity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvWasDerivedFrom{" + "idwasDerivedFrom=" + idwasDerivedFrom + ", generation=" + generation + ", usage=" + usage + ", activity=" + activity + ", generatedEntity=" + generatedEntity + ", usedEntity=" + usedEntity + '}';
     }
 
 }

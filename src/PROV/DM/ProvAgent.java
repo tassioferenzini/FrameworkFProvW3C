@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvAgent")
-public abstract class ProvAgent implements Serializable {
+public class ProvAgent implements Serializable {
 
     @Id
     @GeneratedValue
@@ -21,6 +21,8 @@ public abstract class ProvAgent implements Serializable {
     private Integer idAgent;
     @Column
     private String typeAgent;
+    @Column
+    private String nameAgent;
 
     public ProvAgent() {
     }
@@ -43,6 +45,19 @@ public abstract class ProvAgent implements Serializable {
 
     public void setTypeAgent(String typeAgent) {
         this.typeAgent = typeAgent;
+    }
+
+    public String getNameAgent() {
+        return nameAgent;
+    }
+
+    public void setNameAgent(String nameAgent) {
+        this.nameAgent = nameAgent;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvAgent{" + "idAgent=" + idAgent + ", typeAgent=" + typeAgent + ", nameAgent=" + nameAgent + '}';
     }
 
 }

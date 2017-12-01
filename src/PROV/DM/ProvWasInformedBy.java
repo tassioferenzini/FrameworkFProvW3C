@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvWasInformedBy")
-public abstract class ProvWasInformedBy implements Serializable {
+public class ProvWasInformedBy implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -58,6 +58,11 @@ public abstract class ProvWasInformedBy implements Serializable {
 
     public void setActivity1(ProvActivity activity1) {
         this.activity1 = activity1;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvWasInformedBy{" + "idWasInformedBy=" + idWasInformedBy + ", activity=" + activity + ", activity1=" + activity1 + '}';
     }
 
 }

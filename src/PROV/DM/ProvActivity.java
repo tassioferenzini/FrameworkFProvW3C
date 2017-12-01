@@ -16,12 +16,14 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "ProvActivity")
-public abstract class ProvActivity implements Serializable {
+public class ProvActivity implements Serializable {
 
     @Id
     @GeneratedValue
     @Column
     private Integer idActivity;
+    @Column
+    private String nameActivity;
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date startTime;
@@ -58,6 +60,19 @@ public abstract class ProvActivity implements Serializable {
 
     public void setEndTime(Date endTime) {
         this.endTime = endTime;
+    }
+
+    public String getNameActivity() {
+        return nameActivity;
+    }
+
+    public void setNameActivity(String nameActivity) {
+        this.nameActivity = nameActivity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvActivity{" + "idActivity=" + idActivity + ", nameActivity=" + nameActivity + ", startTime=" + startTime + ", endTime=" + endTime + '}';
     }
 
 }

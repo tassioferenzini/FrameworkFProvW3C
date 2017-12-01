@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ProvAlternateOf")
-public abstract class ProvAlternateOf implements Serializable {
+public class ProvAlternateOf implements Serializable {
 
     @Id
     @GeneratedValue
@@ -57,6 +57,11 @@ public abstract class ProvAlternateOf implements Serializable {
 
     public void setEntity1(PROV.DM.ProvEntity entity1) {
         this.entity1 = entity1;
+    }
+
+    @Override
+    public String toString() {
+        return "ProvAlternateOf{" + "idAlterneteOf=" + idAlterneteOf + ", entity=" + entity + ", entity1=" + entity1 + '}';
     }
 
 }
