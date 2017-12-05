@@ -32,6 +32,7 @@ public class ProvWasDerivedFrom implements Serializable {
     @JoinColumn
     @ManyToOne
     private PROV.DM.ProvEntity usedEntity;
+    private String id;
 
     public ProvWasDerivedFrom() {
     }
@@ -86,6 +87,14 @@ public class ProvWasDerivedFrom implements Serializable {
 
     public void setUsedEntity(ProvEntity usedEntity) {
         this.usedEntity = usedEntity;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

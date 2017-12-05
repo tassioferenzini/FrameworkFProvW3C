@@ -27,6 +27,7 @@ public class ProvActedOnBehalfOfAgAc implements Serializable {
     @JoinColumn
     @ManyToOne
     private ProvAgent agent;
+    private String id;
 
     public ProvActedOnBehalfOfAgAc() {
     }
@@ -57,6 +58,14 @@ public class ProvActedOnBehalfOfAgAc implements Serializable {
 
     public void setAgent(ProvAgent agent) {
         this.agent = agent;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

@@ -28,6 +28,7 @@ public class ProvWasInformedBy implements Serializable {
     @JoinColumn
     @ManyToOne
     private ProvActivity activity1;
+    private String id;
 
     public ProvWasInformedBy() {
     }
@@ -58,6 +59,14 @@ public class ProvWasInformedBy implements Serializable {
 
     public void setActivity1(ProvActivity activity1) {
         this.activity1 = activity1;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

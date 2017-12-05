@@ -30,6 +30,7 @@ public class ProvActivity implements Serializable {
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date endTime;
+    private String id;
 
     public ProvActivity() {
     }
@@ -68,6 +69,14 @@ public class ProvActivity implements Serializable {
 
     public void setNameActivity(String nameActivity) {
         this.nameActivity = nameActivity;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

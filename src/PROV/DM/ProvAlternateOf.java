@@ -27,6 +27,7 @@ public class ProvAlternateOf implements Serializable {
     @JoinColumn
     @ManyToOne
     private PROV.DM.ProvEntity entity1;
+    private String id;
 
     public ProvAlternateOf() {
     }
@@ -57,6 +58,14 @@ public class ProvAlternateOf implements Serializable {
 
     public void setEntity1(PROV.DM.ProvEntity entity1) {
         this.entity1 = entity1;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
