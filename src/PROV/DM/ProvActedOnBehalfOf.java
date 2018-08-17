@@ -30,7 +30,6 @@ public class ProvActedOnBehalfOf implements Serializable {
     @JoinColumn
     @OneToOne
     private ProvAgent agent1;
-    private String id;
 
     public ProvActedOnBehalfOf() {
     }
@@ -69,14 +68,6 @@ public class ProvActedOnBehalfOf implements Serializable {
 
     public void setAgent1(ProvAgent agent1) {
         this.agent1 = agent1;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     @Override

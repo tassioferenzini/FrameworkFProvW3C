@@ -26,7 +26,6 @@ public class ProvHadMember implements Serializable {
     @JoinColumn
     @ManyToOne
     private PROV.DM.ProvEntity entity;
-    private String id;
 
     public ProvHadMember() {
     }
@@ -57,14 +56,6 @@ public class ProvHadMember implements Serializable {
 
     public void setEntity(PROV.DM.ProvEntity entity) {
         this.entity = entity;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     @Override

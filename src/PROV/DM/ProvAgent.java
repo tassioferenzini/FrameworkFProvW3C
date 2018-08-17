@@ -23,7 +23,6 @@ public class ProvAgent implements Serializable {
     private String typeAgent;
     @Column
     private String nameAgent;
-    private String id;
 
     public ProvAgent() {
     }
@@ -54,14 +53,6 @@ public class ProvAgent implements Serializable {
 
     public void setNameAgent(String nameAgent) {
         this.nameAgent = nameAgent;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     @Override

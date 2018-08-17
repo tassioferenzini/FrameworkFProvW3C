@@ -20,7 +20,6 @@ public class ProvEntity implements Serializable {
     private Integer idEntity;
     @Column
     private String nameEntity;
-    private String id;
 
     public Integer getIdEntity() {
         return idEntity;
@@ -36,14 +35,6 @@ public class ProvEntity implements Serializable {
 
     public void setNameEntity(String nameEntity) {
         this.nameEntity = nameEntity;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     @Override
